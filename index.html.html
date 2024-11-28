@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .navbar { background-color: #000; }
+        .navbar a { color: #fff !important; }
+        .hero { position: relative; background: url('car.jpg') no-repeat center center/cover; height: 400px; }
+        .hero h1 { color: #fff; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; }
+        .features { padding: 50px 0; text-align: center; }
+        .features i { font-size: 3rem; color: orange; margin-bottom: 10px; }
+        .car-card { margin: 20px 0; }
+        .footer { background-color: #f8f9fa; padding: 20px; }
+        .footer a { color: #000; }
+        .newsletter { background-color: orange; color: white; padding: 20px; text-align: center; }
+    </style>
+</head>
+<body>
+    <!-- Auth Buttons -->
+<div class="bg-dark py-2">
+    <div class="container d-flex justify-content-end">
+        <button class="btn btn-outline-light btn-sm me-2">Login</button>
+        <button class="btn btn-warning btn-sm">Register</button>
+    </div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">LOGO HERE</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Hot Packages</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Testimonials</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <!-- Hero Section -->
+    <style>
+        .hero {
+            position: relative;
+    background: url(402460-2021-bugatti-chiron.jpg);
+    height: 501px;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-position-x: 355px;
+    background-position: center;
+    background-size: 100em;
+}
+    
+        .hero h1 {
+            color: #fff;
+            position: absolute;
+            top: 25%;  /* Moved text higher */
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-size: 3rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            width: 80%;
+            max-width: 800px;
+        }
+    
+        .search-form {
+            position: absolute;
+            top: 45%;  /* Position form below the text */
+            left: 0;
+            right: 0;
+            z-index: 10;
+            padding: 0 15px;
+        }
+        
+        .search-form form {
+            background-color: rgba(255, 255, 255, 0.95) !important;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        
+        .input-group-text {
+            background-color: transparent;
+            border-right: none;
+        }
+        
+        .form-control, .form-select {
+            border-left: none;
+        }
+        
+        .form-control:focus, .form-select:focus {
+            border-color: #ced4da;
+            box-shadow: none;
+        }
+        
+        .form-label {
+            font-weight: 500;
+            margin-bottom: 0.25rem;
+            color: #333;
+        }
+        .feature-img {
+        width: 132px;
+        height: 132px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        }
+    
+        .features i {
+        margin-top: 15px;
+        }
+    </style>
+    <div >
+     <div class="hero">
+        <h1 >Lorem Ipsum is simply dummy text</h1>
+            <!-- Search Form -->
+            <div class="search-form">
+                <div class="container">
+              <form class="bg-white p-4 rounded shadow">
+            <div class="row g-3">
+                <!-- Location -->
+                <div class="col-md-6">
+                    <label for="location" class="form-label">Location</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+                        <input type="text" class="form-control" id="location" placeholder="Location">
+                    </div>
+                </div>
+                
+                <!-- Car Type -->
+                <div class="col-md-6">
+                    <label for="carType" class="form-label">Car Type</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-car"></i></span>
+                        <select class="form-select" id="carType">
+                            <option selected>Select Car Type</option>
+                            <option value="suv">SUV</option>
+                            <option value="sedan">Sedan</option>
+                            <option value="mpv">MPV</option>
+                            <option value="bike">Bike</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <!-- Pickup Date -->
+                <div class="col-md-3">
+                    <label for="pickupDate" class="form-label">Pick-up Date</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                        <input type="date" class="form-control" id="pickupDate">
+                    </div>
+                </div>
+                
+                <!-- Pickup Time -->
+                <div class="col-md-3">
+                    <label for="pickupTime" class="form-label">Pick-up Time</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-clock"></i></span>
+                        <input type="time" class="form-control" id="pickupTime">
+                    </div>
+                </div>
+                
+                <!-- Return Date -->
+                <div class="col-md-3">
+                    <label for="returnDate" class="form-label">Return Date</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-calendar"></i></span>
+                        <input type="date" class="form-control" id="returnDate">
+                    </div>
+                </div>
+                
+                <!-- Return Time -->
+                <div class="col-md-3">
+                    <label for="returnTime" class="form-label">Return Time</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-clock"></i></span>
+                        <input type="time" class="form-control" id="returnTime">
+                    </div>
+                </div>
+                
+                <!-- Members -->
+                <div class="col-md-6">
+                    <label for="members" class="form-label">Members</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-users"></i></span>
+                        <input type="number" class="form-control" id="members" placeholder="Number of members">
+                    </div>
+                </div>
+                
+                <!-- Driver Age -->
+                <div class="col-md-6">
+                    <label for="driverAge" class="form-label">Driver Age</label>
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-id-card"></i></span>
+                        <input type="number" class="form-control" id="driverAge" placeholder="Enter driver's age">
+                    </div>
+                </div>
+
+                <!-- Search Button -->
+                <div class="col-12 mt-4">
+                    <button type="submit" class="btn btn-warning w-100">Search Available Cars</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    </div>
+</div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features container text-center my-5">
+        <h2>Why Choose Us?</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <img src="pc.jpg" alt="Reliable Service" class="feature-img mb-3">
+                <i class="fas fa-taxi"></i>
+                <h4>Reliable Service</h4>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+            <div class="col-md-3">
+                <img src="img23.jpg" alt="Lowest Prices" class="feature-img mb-3">
+                <i class="fas fa-dollar-sign"></i>
+                <h4>Lowest Prices</h4>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+            <div class="col-md-3">
+                <img src="pc.jpg" alt="24/7 Support" class="feature-img mb-3">
+                <i class="fas fa-headset"></i>
+                <h4>24/7 Support</h4>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+            <div class="col-md-3">
+                <img src="quality.jpg" alt="Best Cars" class="feature-img mb-3">
+                <i class="fas fa-car"></i>
+                <h4>Best Cars</h4>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cars Section -->
+    <div class="container my-5">
+        <h2 class="text-center">Choose Your Cab</h2>
+        <div class="row">
+            <div class="col-md-3 car-card">
+                <div class="card">
+                    <img src="fiat100.jpeg" class="card-img-top" alt="Car">
+                    <div class="card-body">
+                        <h5 class="card-title">Cci-Fiat 500</h5>
+                        <p class="card-text">Mileage: 140,000 km | Volume: 2.3L | Air Conditioning: Yes</p>
+                        <a href="#" class="btn btn-warning">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 car-card">
+                <div class="card">
+                    <img src="images.jpeg" class="card-img-top" alt="Car">
+                    <div class="card-body">
+                        <h5 class="card-title">Cci-Fiat 500</h5>
+                        <p class="card-text">Mileage: 140,000 km | Volume: 2.3L | Air Conditioning: Yes</p>
+                        <a href="#" class="btn btn-warning">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 car-card">
+                <div class="card">
+                    <img src="images (2).jpeg" class="card-img-top" alt="Car">
+                    <div class="card-body">
+                        <h5 class="card-title">Cci-Fiat 500</h5>
+                        <p class="card-text">Mileage: 140,000 km | Volume: 2.3L | Air Conditioning: Yes</p>
+                        <a href="#" class="btn btn-warning">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 car-card">
+                <div class="card">
+                    <img src="fiat200.jpeg" class="card-img-top" alt="Car">
+                    <div class="card-body">
+                        <h5 class="card-title">Cci-Fiat 500</h5>
+                        <p class="card-text">Mileage: 140,000 km | Volume: 2.3L | Air Conditioning: Yes</p>
+                        <a href="#" class="btn btn-warning">Book Now</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Repeat for other cars -->
+        </div>
+    </div>
+
+    <!-- Testimonials Section -->
+    <div class="container text-center my-5">
+        <h2>What Our People Are Saying</h2>
+        <blockquote class="blockquote">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+            <footer class="blockquote-footer">John Smith, Founder & CEO</footer>
+        </blockquote>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container text-center">
+            <p>&copy; 2024 Company Name. All Rights Reserved.</p>
+            <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a>
+        </div>
+    </footer>
+
+    <!-- Newsletter Section -->
+    <div class="newsletter">
+        <h4>Sign up for our Newsletter</h4>
+        <form>
+            <input type="email" placeholder="Your Email Address" class="form-control d-inline w-50">
+            <button class="btn btn-dark">Subscribe</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
